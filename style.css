@@ -1,3 +1,10 @@
 body {
-    background-color: black;
+    background-color: rgb(223, 223, 223);
+}
+
+.display {
+    background-color: white;
+    border: 5px solid rgb(71, 71, 71);
+    width: 80vmin;
+    height: 80vmin;
 }
