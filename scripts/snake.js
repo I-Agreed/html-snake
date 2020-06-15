@@ -27,11 +27,11 @@ class snake {
         var y;
         ctx.clearRect(0, 0, display.width, display.height);
         ctx.fillStyle = snakeColour;
-        ctx.fillRect(this.x * squareSize, this.y * squareSize, squareSize, squareSize);
+        ctx.fillRect(this.x * squareSize, this.y * squareSize, squareSize + 1, squareSize + 1);
         for (i = 0; i < this.tailPos.length; i++) {
             x = this.tailPos[i][0];
             y = this.tailPos[i][1];
-            ctx.fillRect(x * squareSize, y * squareSize, squareSize, squareSize);
+            ctx.fillRect(x * squareSize, y * squareSize, squareSize + 1, squareSize + 1);
         }
         ctx.fillStyle = foodColour;
         for (i = 0; i < foodPos.length; i++) {
@@ -48,11 +48,11 @@ class snake {
         var y;
         ctx.clearRect(0, 0, display.width, display.height);
         ctx.fillStyle = deadColour;
-        ctx.fillRect(this.x * squareSize, this.y * squareSize, squareSize, squareSize);
+        ctx.fillRect(this.x * squareSize, this.y * squareSize, squareSize + 1, squareSize + 1);
         for (i = 0; i < this.tailPos.length; i++) {
             x = this.tailPos[i][0];
             y = this.tailPos[i][1];
-            ctx.fillRect(x * squareSize, y * squareSize, squareSize, squareSize);
+            ctx.fillRect(x * squareSize, y * squareSize, squareSize + 1, squareSize + 1);
         }
         ctx.fillStyle = foodColour;
         for (i = 0; i < foodPos.length; i++) {
