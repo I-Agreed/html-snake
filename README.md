@@ -1,2 +1,2 @@
 # html snake
- snake in html
+a simple snake game
