@@ -122,16 +122,6 @@ class snake {
     }
 }
 
-function loop() {
-    player.moveWithDirection();
-    player.draw();
-    if (gameOver) {
-        player.deathDraw();
-    } else {
-        setTimeout(loop, 100);
-    }
-}
-
 function placeFood() {
     var x = Math.floor(Math.random() * gridSize);
     var y = Math.floor(Math.random() * gridSize);
@@ -142,6 +132,17 @@ function randomCoords() {
     var x = Math.floor(Math.random() * gridSize);
     var y = Math.floor(Math.random() * gridSize);
     return [x, y];
+}
+
+function loop() {
+    player.moveWithDirection();
+    player.draw();
+    score.textContent = "Score: " + (player.tailPos.length - 2);
+    if (gameOver) {
+        player.deathDraw();
+    } else {
+        setTimeout(loop, 100);
+    }
 }
 
 var player = new snake(5, 5);
