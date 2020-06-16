@@ -107,16 +107,24 @@ class snake {
     changeDirection(event) {
         switch (event.key) {
             case "ArrowLeft":
-                snakeDirection = "left";
+                if (snakeDirection != "right") {
+                    snakeDirection = "left";
+                }
                 break;
             case "ArrowUp":
-                snakeDirection = "up";
+                if (snakeDirection != "down") {
+                    snakeDirection = "up";
+                }
                 break;
             case "ArrowRight":
-                snakeDirection = "right";
+                if (snakeDirection != "left") {
+                    snakeDirection = "right";
+                }
                 break;
             case "ArrowDown":
-                snakeDirection = "down";
+                if (snakeDirection != "up") {
+                    snakeDirection = "down";
+                }
                 break;
         }
     }
