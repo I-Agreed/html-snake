@@ -145,7 +145,9 @@ function loop() {
     }
 }
 
-var player = new snake(5, 5);
+var player = new snake(Math.floor(Math.random() * gridSize),
+    Math.floor(Math.random() * gridSize));
+
 body.onkeydown = player.changeDirection
 player.draw(1);
 placeFood();
