@@ -7,6 +7,7 @@ var foodPos = [];
 var gameOver = false;
 var snakeDirection = "";
 var player;
+var loopTimeout;
 
 class snake {
     constructor(x, y) {
@@ -149,11 +150,12 @@ function loop() {
     if (gameOver) {
         player.deathDraw();
     } else {
-        setTimeout(loop, 100);
+        loopTimeout = setTimeout(loop, 100);
     }
 }
 
 function setup() {
+    clearTimeout(loopTimeout);
     foodPos = [];
     gameOver = false;
     snakeDirection = "";
