@@ -2,11 +2,11 @@ const gridSize = 15;
 const snakeColour = "#474747"
 const foodColour = "#00ff00"
 const deadColour = "#ff0000"
-
-var gameOver = false;
 var ctx = display.getContext("2d");
 var foodPos = [];
-var snakeDirection
+var gameOver = false;
+var snakeDirection = "";
+var player;
 
 class snake {
     constructor(x, y) {
@@ -153,10 +153,17 @@ function loop() {
     }
 }
 
-var player = new snake(Math.floor(Math.random() * gridSize),
-    Math.floor(Math.random() * gridSize));
+function setup() {
+    foodPos = [];
+    gameOver = false;
+    snakeDirection = "";
+    player = new snake(Math.floor(Math.random() * gridSize),
+        Math.floor(Math.random() * gridSize));
+    body.onkeydown = player.changeDirection;
+    player.draw();
+    placeFood();
+    loop();
+}
 
-body.onkeydown = player.changeDirection
-player.draw(1);
-placeFood();
-loop();
+startButton.onclick = setup;
+setup();

@@ -6,14 +6,23 @@ body {
 .display {
     background-color: white;
     border: 5px solid rgb(71, 71, 71);
-    width: 80vmin;
-    height: 80vmin;
+    width: 75vmin;
+    height: 75vmin;
     margin: auto;
     display: block;
 }
 
 .score {
     text-align: center;
+    font-size: 20px;
+    font-family: "Ubuntu", sans-serif;
+    color: rgb(71, 71, 71);
+}
+
+.startButton {
+    text-align: center;
+    margin: -5px auto auto auto;
+    display: block;
     font-size: 20px;
     font-family: "Ubuntu", sans-serif;
     color: rgb(71, 71, 71);
