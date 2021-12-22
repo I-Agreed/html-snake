@@ -102,7 +102,7 @@ function randomCoords() {
 
 function loop() {
     player.moveWithDirection();
-    display.textContent = `Size: ${gridSize}x${gridSize} Snake Head: (${player.x}, ${player.y}) Food: (${foodPos[0][0]}, ${foodPos[0][1]})  Score: ${(player.tailPos.length - 2)} <br> Snake Tail: [${player.tailPos.map(x => `(${x[0]}, ${x[1]})`).join(", ")}]`;
+    display.textContent = `Size: ${gridSize}x${gridSize} Snake Head: (${player.x}, ${player.y}) Food: (${foodPos[0][0]}, ${foodPos[0][1]})  Score: ${(player.tailPos.length - 2)} Snake Tail: [${player.tailPos.map(x => `(${x[0]}, ${x[1]})`).join(", ")}]`;
     if (gameOver) {
         display.textContent = "GAME OVER";
     } else {
